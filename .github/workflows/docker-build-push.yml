@@ -35,10 +35,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.image_tag.outputs.tag_name }}
+          tags: ${{ steps.image_tag.outputs.tag_name }} , ${{ steps.image_tag.outputs.tag_base }}:latest
           cache-from: type=registry,ref=${{ steps.image_tag.outputs.tag_name }}
           cache-to: type=inline
-  
+ 
       - name: Build and push dev
         uses: docker/build-push-action@v5
         if: github.ref == 'refs/heads/dev'

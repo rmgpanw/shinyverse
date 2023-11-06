@@ -1,0 +1,11 @@
+crosstalk
+duckdb
+flextable
+gtsummary
+igraph
+reactable
+renv
+targets
+tarchetypes
+tidymodels
+visNetwork
